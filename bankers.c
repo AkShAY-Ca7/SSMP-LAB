@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-
+//bankers
 struct process{
 	int alloc[20],need[20],max[20],done;
 };
