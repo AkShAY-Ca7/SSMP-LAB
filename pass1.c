@@ -5,8 +5,8 @@
 void main()
 {
     FILE *f1,*f2,*output,*symtab;
-    int lc,sa,op1,len;
-    char m1[20],la[20],op[20],hex[20];
+    int lc,sa,len;
+    char m1[20],la[20],op[20],hex[20],op1[20];
 
     f1=fopen("input.txt","r");
     f2=fopen("optab.txt","r");
@@ -17,9 +17,9 @@ void main()
 
     if(strcmp(m1,"START")==0)
     {
-        sa=op1;
+        sa=(int)op1;
         lc=sa;
-        fprintf(output,"\t%s\t%s\t%d\n",la,m1,op1);
+        fprintf(output,"\t%s\t%s\t%s\n",la,m1,op1);
     }
     else
     {
@@ -27,7 +27,7 @@ void main()
     }
     while(!feof(f1))
     {
-        fscanf(f1,"%s\t%s\t%d",la,m1,&op1);
+        fscanf(f1,"%s\t%s\t%s",la,m1,op1);
         if(strcmp(la,"**")==0)
         {
             while(!feof(f2))
