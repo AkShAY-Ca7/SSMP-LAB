@@ -5,8 +5,8 @@
 void main()
 {
     FILE *f1,*f2,*output,*symtab;
-    int lc,sa,op1,o ,len;
-    char m1[20],la[20],op[20],otp[20],hex[20];
+    int lc,sa,op1,len;
+    char m1[20],la[20],op[20],hex[20];
 
     f1=fopen("input.txt","r");
     f2=fopen("optab.txt","r");
@@ -50,7 +50,13 @@ void main()
         }
         else if(strcmp(m1,"RESW"))
         {
-            
+            lc=lc*op1+3;
+            fprintf(output,"%d\t%s\t%s\t%d\n",lc,la,m1,op1);
+        }
+        else if(strcmp(m1,"RESB"))
+        {
+            lc=op1;
+            fprintf(output,"%d\t%s\t%s\t%d\n",lc,la,m1,op1);
         }
     }
 }
