@@ -50,12 +50,12 @@ void main()
         }
         else if(strcmp(m1,"RESW"))
         {
-            lc=lc*op1+3;
+            lc=lc*(int)op1+3;
             fprintf(output,"%d\t%s\t%s\t%d\n",lc,la,m1,op1);
         }
         else if(strcmp(m1,"RESB"))
         {
-            lc=op1;
+            lc=lc+(int)op1;
             fprintf(output,"%d\t%s\t%s\t%d\n",lc,la,m1,op1);
         }
     }
