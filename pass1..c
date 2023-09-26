@@ -17,7 +17,7 @@ void main()
 
     if(strcmp(m1,"START")==0)
     {
-      sa=op1;
+        sa=op1;
         lc=sa;
         fprintf(output,"\t%s\t%s\t%d\n",la,m1,op1);
     }
@@ -27,11 +27,11 @@ void main()
     }
     while(!feof(f1))
     {
-    fscanf(f1,"%s\t%s\t%d",la,m1,&op1);
- 
-    if(strcmp(la,"**")==0)
-    {
-    lc=lc+3;
-    fprintf(output,"%d\t%s\t%s\t%d\n",lc,la,m1,op1);
+        fscanf(f1,"%s\t%s\t%d",la,m1,&op1);
+        if(strcmp(la,"**")==0)
+        {
+            lc=lc+3;
+            fprintf(output,"%d\t%s\t%s\t%d\n",lc,la,m1,op1);
+        }
     }
 }
