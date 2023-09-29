@@ -1,7 +1,7 @@
 **      START   1000
 **      LDA     ALPHA
 **      MUL     BETA
-**      START   GAMMA
+**      STA   GAMMA
 ALPHA   WORD    2
 BETA    WORD    4
 GAMMA   RESW    1
