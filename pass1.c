@@ -29,9 +29,7 @@ void main()
     fscanf(f1,"%s\t%s\t%s",la,m1,op2);
     while(strcmp(m1,"END")!=0)
     {
-        //fscanf(f1,"%s\t%s\t%s",la,m1,op2);
         fprintf(output,"%d\t",lc);
-        //if( (strcmp(la,"**")==0) && (strcmp(m1,"END")!=0) )
          if(strcmp(la,"**")==0)
         {
         	int flag=0;
@@ -52,7 +50,6 @@ void main()
             	}
         }
         
-        //else if((strcmp(la,"**")!=0))
         else
         {
         	fprintf(symtab,"%s\t%d\n",la,lc);
@@ -74,4 +71,6 @@ void main()
         fscanf(f1,"%s\t%s\t%s",la,m1,op2);
     }
     fprintf(output,"%d\t%s\t%s\t%d\n",lc,la,m1,sa);
+    len=lc-sa;
+    fprintf(output,"Program length = %d",len);
 }
