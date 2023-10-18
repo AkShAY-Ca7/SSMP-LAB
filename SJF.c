@@ -30,7 +30,7 @@ void main()
 			}
 		}
 	}
-	
+	//gantt chart
 	printf("\nGantt Chart");
 	printf("\n--------------------------------\n");
 	for(i=0;i<n;i++)
